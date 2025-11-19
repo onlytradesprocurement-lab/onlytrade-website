@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Only Trade LTD – Export of Industrial Products</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="Only Trade LTD (Batumi, Georgia) – export of industrial and technical products, equipment and materials to CIS and other countries."/>
+  <style>
+    :root{
+      --bg:#0f172a;--bg-light:#111827;--accent:#22c55e;--text-main:#e5e7eb;--text-muted:#9ca3af;
+      --card-bg:#111827;--border-subtle:#1f2937;--shadow-soft:0 18px 45px rgba(0,0,0,.5);
+      --radius-xl:18px;--radius-2xl:28px;--transition-fast:.2s ease;--container-width:1120px
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:radial-gradient(circle at top,#1f2937 0,#020617 60%);
+      color:var(--text-main);line-height:1.6;-webkit-font-smoothing:antialiased
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--container-width);margin:0 auto;padding:0 20px}
+    header{
+      position:sticky;top:0;z-index:40;backdrop-filter:blur(18px);
+      background:linear-gradient(to bottom,rgba(15,23,42,.96),rgba(15,23,42,.75),transparent);
+      border-bottom:1px solid rgba(15,23,42,.9)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:18px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-mark{
+      width:32px;height:32px;border-radius:999px;
+      background:radial-gradient(circle at 30% 20%,#bbf7d0,#22c55e 45%,#14532d);
+      box-shadow:0 0 0 1px rgba(34,197,94,.45),0 12px 30px rgba(34,197,94,.4)
+    }
+    .logo-text-main{font-weight:700;letter-spacing:.06em;font-size:.9rem;text-transform:uppercase}
+    .logo-text-sub{font-size:.75rem;color:var(--text-muted)}
+    .nav-links{display:flex;align-items:center;gap:18px;font-size:.9rem}
+    .nav-links a{color:var(--text-muted);transition:color var(--transition-fast),transform var(--transition-fast)}
+    .nav-links a:hover{color:#f9fafb;transform:translateY(-1px)}
+    .nav-cta{
+      padding:8px 16px;border-radius:999px;border:1px solid rgba(34,197,94,.7);
+      background:linear-gradient(135deg,rgba(34,197,94,.1),rgba(22,163,74,.3));
+      color:#ecfdf5;font-size:.85rem;font-weight:500;display:inline-flex;align-items:center;gap:8px;
+      box-shadow:0 12px 30px rgba(22,163,74,.35);
+      transition:transform var(--transition-fast),box-shadow var(--transition-fast),background var(--transition-fast)
+    }
+    .nav-cta span.icon{display:inline-block;font-size:1.1rem;transform:translateY(1px)}
+    .nav-cta:hover{
+      transform:translateY(-1px);box-shadow:0 18px 45px rgba(22,163,74,.4);
+      background:linear-gradient(135deg,rgba(34,197,94,.2),rgba(22,163,74,.45))
+    }
+    .nav-toggle{display:none;background:none;border:none;color:var(--text-main);font-size:1.4rem;cursor:pointer}
+    .hero{padding:52px 0 40px}
+    .hero-inner{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2.3fr);gap:40px;align-items:center}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;padding:4px 10px;border-radius:999px;
+      border:1px solid rgba(34,197,94,.4);
+      background:radial-gradient(circle at 10% 0,rgba(34,197,94,.35),rgba(15,23,42,.9));
+      color:#bbf7d0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px
+    }
+    .eyebrow-dot{width:6px;height:6px;border-radius:999px;background:#22c55e;box-shadow:0 0 10px rgba(34,197,94,.9)}
+    .hero h1{font-size:clamp(2rem,3vw + 1rem,2.7rem);line-height:1.15;margin-bottom:12px}
+    .hero h1 .accent{
+      background:linear-gradient(120deg,#bbf7d0,#4ade80,#22c55e);-webkit-background-clip:text;color:transparent
+    }
+    .hero-subtitle{font-size:.95rem;color:var(--text-muted);max-width:480px;margin-bottom:20px}
+    .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+    .badge{font-size:.75rem;padding:6px 10px;border-radius:999px;background:#0b1120;border:1px solid #1f2937;color:var(--text-muted)}
+    .hero-cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px}
+    .btn-primary{
+      padding:9px 16px;border-radius:999px;border:none;cursor:pointer;
+      background:linear-gradient(135deg,#22c55e,#16a34a);color:#022c22;
+      font-size:.9rem;font-weight:600;display:inline-flex;align-items:center;gap:8px;
+      box-shadow:0 18px 45px rgba(22,163,74,.6);
+      transition:transform var(--transition-fast),box-shadow var(--transition-fast),filter var(--transition-fast)
+    }
+    .btn-primary:hover{transform:translateY(-1px);filter:brightness(1.05);box-shadow:0 22px 55px rgba(22,163,74,.7)}
+    .btn-secondary{
+      padding:9px 14px;border-radius:999px;border:1px solid #4b5563;background:#0b1120;
+      color:var(--text-main);font-size:.9rem;display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+      transition:transform var(--transition-fast),background var(--transition-fast),border-color var(--transition-fast)
+    }
+    .btn-secondary:hover{transform:translateY(-1px);background:#111827;border-color:#9ca3af}
+    .hero-note{font-size:.8rem;color:var(--text-muted)}
+    .hero-note strong{color:#e5e7eb}
+    .hero-right{
+      background:radial-gradient(circle at 0 0,#22c55e20,transparent 60%),
+      radial-gradient(circle at 100% 0,#0ea5e930,transparent 55%),
+      linear-gradient(145deg,#020617,#020617);
+      border-radius:var(--radius-2xl);padding:20px;border:1px solid var(--border-subtle);
+      box-shadow:var(--shadow-soft);position:relative;overflow:hidden
+    }
+    .hero-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .stat-card{
+      background:rgba(15,23,42,.9);border-radius:18px;padding:12px 14px;border:1px solid rgba(31,41,55,.95);
+      position:relative;overflow:hidden
+    }
+    .stat-card:before{
+      content:"";position:absolute;inset:0;
+      background:radial-gradient(circle at 10% 0,rgba(34,197,94,.2),transparent 55%);
+      opacity:.7;pointer-events:none
+    }
+    .stat-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--text-muted);margin-bottom:6px}
+    .stat-value{font-size:1.15rem;font-weight:600;margin-bottom:2px}
+    .stat-desc{font-size:.75rem;color:var(--text-muted)}
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;
+      border:1px dashed #4b5563;background:#020617;font-size:.75rem;color:var(--text-muted);margin-top:10px
+    }
+    .chip-dot{width:8px;height:8px;border-radius:999px;background:#22c55e;box-shadow:0 0 12px rgba(34,197,94,.9)}
+    section{padding:18px 0 8px}
+    .section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:14px;gap:10px}
+    .section-title{font-size:1.15rem;font-weight:600}
+    .section-subtitle{font-size:.85rem;color:var(--text-muted);max-width:420px}
+    .about-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2.1fr);gap:24px}
+    .card{
+      background:var(--card-bg);border-radius:var(--radius-xl);border:1px solid var(--border-subtle);
+      padding:16px 18px;box-shadow:0 10px 30px rgba(0,0,0,.45)
+    }
+    .card h3{font-size:1rem;margin-bottom:8px}
+    .card p{font-size:.9rem;color:var(--text-muted)}
+    .list-check{list-style:none;margin-top:10px;font-size:.88rem}
+    .list-check li{display:flex;gap:8px;margin-bottom:6px;color:var(--text-main)}
+    .list-check span.icon{font-size:1rem;line-height:1.4}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px;font-size:.8rem}
+    .pill{
+      padding:5px 9px;border-radius:999px;border:1px solid #374151;
+      background:#020617;color:var(--text-muted)
+    }
+    .two-col{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .mini-title{font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;color:var(--text-muted);margin-bottom:6px}
+    ul.clean{list-style:none;font-size:.9rem;color:var(--text-main)}
+    ul.clean li{margin-bottom:5px}
+    ul.clean li span{color:var(--text-muted);font-size:.85rem}
+    .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;font-size:.85rem}
+    .step-card{background:#020617;border-radius:16px;padding:10px 12px;border:1px solid #1f2937}
+    .step-num{font-size:.78rem;color:var(--text-muted);margin-bottom:4px}
+    .step-title{font-size:.9rem;margin-bottom:4px}
+    .flags{display:flex;flex-wrap:wrap;gap:8px;font-size:.8rem}
+    .flag-pill{
+      border-radius:999px;padding:5px 9px;border:1px solid #374151;
+      background:#020617;display:inline-flex;align-items:center;gap:6px
+    }
+    .flag-emoji{font-size:1rem}
+    .contact-card{background:var(--card-bg);border-radius:var(--radius-xl);border:1px solid var(--border-subtle);padding:16px 18px;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+    .contact-meta{font-size:.9rem;color:var(--text-muted)}
+    .contact-meta p{margin-bottom:6px}
+    .contact-meta strong{color:var(--text-main)}
+    .contact-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .contact-tag{
+      font-size:.8rem;padding:4px 7px;border-radius:999px;border:1px solid #374151;
+      background:#020617;color:var(--text-muted)
+    }
+    footer{
+      padding:18px 0 26px;font-size:.8rem;color:var(--text-muted);
+      border-top:1px solid #020617;margin-top:22px
+    }
+    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:12px;flex-wrap:wrap}
+    .footer-links a{cursor:pointer}
+    .footer-links a:hover{color:#e5e7eb}
+    @media (max-width:900px){
+      .hero-inner{grid-template-columns:minmax(0,1fr)}
+      .hero-right{order:-1}
+      .about-grid,.two-col{grid-template-columns:minmax(0,1fr)}
+      .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .nav-links{
+        position:absolute;inset:52px 20px auto;padding:12px 14px;border-radius:16px;
+        background:rgba(15,23,42,.98);flex-direction:column;align-items:flex-start;
+        border:1px solid #1f2937;box-shadow:0 18px 45px rgba(0,0,0,.75);
+        transform-origin:top;transform:scaleY(.6);opacity:0;pointer-events:none;
+        transition:opacity var(--transition-fast),transform var(--transition-fast)
+      }
+      .nav-links.open{opacity:1;pointer-events:auto;transform:scaleY(1)}
+      .nav-toggle{display:block}
+      .nav-cta{width:100%;justify-content:center}
+    }
+    @media (max-width:640px){
+      .hero{padding-top:40px}
+      .steps{grid-template-columns:minmax(0,1fr)}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav class="nav">
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <div>
+          <div class="logo-text-main">ONLY TRADE LTD</div>
+          <div class="logo-text-sub">Export of industrial products</div>
+        </div>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation" id="navToggle">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#workflow">Process</a>
+        <a href="#geography">Geography</a>
+        <a href="#contacts">Contacts</a>
+        <a href="#contacts" class="nav-cta">
+          <span class="icon">✉</span>
+          Contact us
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            EXPORT • INDUSTRIAL SUPPLY • TENDERS
+          </div>
+          <h1>
+            Export partner for <span class="accent">industrial & technical products</span>
+          </h1>
+          <p class="hero-subtitle">
+            Only Trade LTD (Batumi, Georgia) arranges export supplies of equipment, materials and consumables
+            for industrial projects and public tenders across the CIS region and beyond.
+          </p>
+          <div class="hero-badges">
+            <div class="badge">Transformer oil treatment units</div>
+            <div class="badge">Firefighting foam concentrate</div>
+            <div class="badge">Clamps, fittings, cables</div>
+            <div class="badge">Custom equipment on request</div>
+          </div>
+          <div class="hero-cta-row">
+            <button class="btn-primary" onclick="scrollToId('contacts')">
+              Get in touch
+              <span>→</span>
+            </button>
+            <button class="btn-secondary" onclick="scrollToId('products')">
+              View product directions
+            </button>
+          </div>
+          <div class="hero-note">
+            Typical order size: <strong>from one pallet to full container loads</strong>.
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="hero-grid">
+            <div class="stat-card">
+              <div class="stat-label">Experience</div>
+              <div class="stat-value">Export & tenders</div>
+              <div class="stat-desc">Work with industrial equipment and technical tenders.</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Geography</div>
+              <div class="stat-value">12+</div>
+              <div class="stat-desc">Suppliers in Europe, Turkey, China & CIS region.</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Focus</div>
+              <div class="stat-value">B2B</div>
+              <div class="stat-desc">Utilities, railway, energy, municipal and industrial clients.</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Tenders</div>
+              <div class="stat-value">Public & private</div>
+              <div class="stat-desc">Experience with state procurement platforms.</div>
+            </div>
+          </div>
+          <div class="chip">
+            <span class="chip-dot"></span>
+            Full cycle: <strong>from supplier search to delivered goods</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="mini-title">Company</div>
+          <h2 class="section-title">About Only Trade LTD</h2>
+        </div>
+        <p class="section-subtitle">
+          We work as an export integrator: we search for manufacturers, negotiate, consolidate shipments and
+          deliver the required products to the Customer’s warehouse or port.
+        </p>
+      </div>
+      <div class="about-grid">
+        <div class="card">
+          <h3>What we do</h3>
+          <p>
+            Only Trade LTD is an export trading company based in Batumi, Georgia. We specialize in industrial and
+            technical products for energy, utilities, construction, firefighting and infrastructure.
+          </p>
+          <ul class="list-check">
+            <li>
+              <span class="icon">✔</span>
+              Supplier search and technical matching to tender requirements
+            </li>
+            <li>
+              <span class="icon">✔</span>
+              Price negotiations and collection of documentation
+            </li>
+            <li>
+              <span class="icon">✔</span>
+              Export logistics, packing and shipment control
+            </li>
+            <li>
+              <span class="icon">✔</span>
+              Support with certificates, passports and manuals
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Key advantages</h3>
+          <ul class="list-check">
+            <li>
+              <span class="icon">★</span>
+              Understanding of state procurement procedures in Georgia and CIS countries
+            </li>
+            <li>
+              <span class="icon">★</span>
+              Work with manufacturers from Turkey, China, EU and CIS
+            </li>
+            <li>
+              <span class="icon">★</span>
+              Ability to handle complex technical specifications (EN, IEC, GOST, etc.)
+            </li>
+            <li>
+              <span class="icon">★</span>
+              Communication in English, Russian and Georgian with customers and suppliers
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="mini-title">Directions</div>
+          <h2 class="section-title">Products & industries</h2>
+        </div>
+        <p class="section-subtitle">
+          Below are typical directions. We can also work with custom industrial products on request, based on
+          your technical specification or tender documentation.
+        </p>
+      </div>
+      <div class="card" style="margin-bottom:14px;">
+        <div class="mini-title">Example product groups</div>
+        <div class="pill-row">
+          <div class="pill">Transformer oil treatment & degassing units</div>
+          <div class="pill">Vacuum oil purification plants</div>
+          <div class="pill">Firefighting foam concentrates</div>
+          <div class="pill">Measuring & testing equipment</div>
+          <div class="pill">Clamps, fittings, insulators</div>
+          <div class="pill">Cables and cable accessories</div>
+          <div class="pill">Industrial pumps and compressors</div>
+          <div class="pill">Metal structures & hardware</div>
+          <div class="pill">Specialized spare parts</div>
+        </div>
+      </div>
+      <div class="two-col">
+        <div class="card">
+          <div class="mini-title">Industries served</div>
+          <ul class="clean">
+            <li>Energy & power grids <span>– substations, utilities</span></li>
+            <li>Railway & transport <span>– depots, workshops</span></li>
+            <li>Municipal services <span>– city utilities, warehouses</span></li>
+            <li>Construction & infrastructure projects</li>
+            <li>Industrial plants & factories</li>
+            <li>Firefighting & safety services</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="mini-title">Documents & compliance</div>
+          <ul class="clean">
+            <li>Manufacturer’s certificates and ISO documentation</li>
+            <li>CE / EC declarations (if applicable)</li>
+            <li>Test reports and quality passports</li>
+            <li>Instruction manuals in required languages</li>
+            <li>Marking and packing according to tender requirements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="workflow">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="mini-title">Process</div>
+          <h2 class="section-title">How we work with your request</h2>
+        </div>
+        <p class="section-subtitle">
+          You can send us a tender specification, bill of quantities or just a description of the required
+          product – we will prepare an offer based on suitable manufacturers.
+        </p>
+      </div>
+      <div class="steps">
+        <div class="step-card">
+          <div class="step-num">Step 1</div>
+          <div class="step-title">Technical request</div>
+          <p>
+            You send us specification and desired delivery terms (EXW, FCA, CIF, DAP, etc.).
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 2</div>
+          <div class="step-title">Supplier search</div>
+          <p>
+            We select manufacturers, clarify technical details and obtain prices and lead times.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 3</div>
+          <div class="step-title">Offer & agreement</div>
+          <p>
+            You receive a commercial offer; we discuss options and fix configuration and delivery schedule.
+          </p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">Step 4</div>
+          <div class="step-title">Production & shipment</div>
+          <p>
+            We control production, packing, shipment and provide all necessary documents.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEOGRAPHY -->
+  <section id="geography">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="mini-title">Geography</div>
+          <h2 class="section-title">Where we work</h2>
+        </div>
+        <p class="section-subtitle">
+          We cooperate with manufacturers from different countries and supply products mainly to CIS and
+          neighboring regions.
+        </p>
+      </div>
+      <div class="card">
+        <div class="mini-title">Main supplier regions</div>
+        <div class="flags" style="margin-bottom:12px;">
+          <div class="flag-pill"><span class="flag-emoji">🇹🇷</span>Turkey</div>
+          <div class="flag-pill"><span class="flag-emoji">🇨🇳</span>China</div>
+          <div class="flag-pill"><span class="flag-emoji">🇩🇪</span>Germany</div>
+          <div class="flag-pill"><span class="flag-emoji">🇵🇱</span>Poland</div>
+          <div class="flag-pill"><span class="flag-emoji">🇷🇺</span>Russia</div>
+          <div class="flag-pill"><span class="flag-emoji">🇧🇾</span>Belarus</div>
+          <div class="flag-pill"><span class="flag-emoji">🇰🇿</span>Kazakhstan</div>
+        </div>
+        <div class="mini-title">Main customer regions</div>
+        <div class="flags">
+          <div class="flag-pill"><span class="flag-emoji">🇬🇪</span>Georgia</div>
+          <div class="flag-pill"><span class="flag-emoji">🇦🇿</span>Azerbaijan</div>
+          <div class="flag-pill"><span class="flag-emoji">🇦🇲</span>Armenia</div>
+          <div class="flag-pill"><span class="flag-emoji">🇺🇿</span>Uzbekistan</div>
+          <div class="flag-pill"><span class="flag-emoji">🇰🇬</span>Kyrgyzstan</div>
+          <div class="flag-pill"><span class="flag-emoji">🇹🇯</span>Tajikistan</div>
+          <div class="flag-pill"><span class="flag-emoji">🌍</span>Other countries on request</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS (NO FORM) -->
+  <section id="contacts">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <div class="mini-title">Contacts</div>
+          <h2 class="section-title">Direct contacts</h2>
+        </div>
+        <p class="section-subtitle">
+          Please send your tender specification, list of items or short description of the required product directly
+          to our e-mail. Indicate the deadline and country of destination.
+        </p>
+      </div>
+      <div class="contact-card">
+        <div class="contact-meta">
+          <p>
+            <strong>Company:</strong>
+            &nbsp;Only Trade LTD
+          </p>
+          <p>
+            <strong>Location:</strong>
+            &nbsp;Batumi, Georgia
+          </p>
+          <p>
+            <strong>E-mail:</strong>
+            &nbsp;<a href="mailto:onlytrades.procurement@gmail.com">onlytrades.procurement@gmail.com</a>
+          </p>
+          <p>
+            <strong>Phone / WhatsApp:</strong>
+            &nbsp;+995 555 70 70 26
+          </p>
+          <p>
+            <strong>Working languages:</strong>
+            &nbsp;English, Russian, Georgian
+          </p>
+        </div>
+        <div class="contact-tags">
+          <div class="contact-tag">Tender support</div>
+          <div class="contact-tag">Export supplies</div>
+          <div class="contact-tag">Industrial equipment</div>
+          <div class="contact-tag">Technical products</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        © <span id="year"></span> Only Trade LTD. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a onclick="scrollToId('about')">About</a>
+        <span>•</span>
+        <a onclick="scrollToId('products')">Products</a>
+        <span>•</span>
+        <a onclick="scrollToId('contacts')">Contacts</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+  }
+
+  function scrollToId(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    window.scrollTo({ top: el.offsetTop - 70, behavior: "smooth" });
+    if (navLinks) navLinks.classList.remove("open");
+  }
+
+  document.getElementById("year").textContent = new Date().getFullYear().toString();
+</script>
+</body>
+</html>
